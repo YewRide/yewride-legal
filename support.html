@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Assistance — YewRide</title>
+<meta name="description" content="Assistance YewRide : contact, questions fréquentes sur l'Apple Watch, la détection, les autorisations, l'abonnement Premium et la suppression de compte.">
+<style>
+:root {
+  --bg: #0d141f;
+  --card: #1a2530;
+  --text: #ffffff;
+  --text-secondary: #9aa5b1;
+  --accent: #22d3ee;
+  --border: rgba(255,255,255,0.08);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px 24px 96px;
+}
+
+.top-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 17px;
+  letter-spacing: 0.02em;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.brand-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 9px;
+  box-shadow: 0 0 12px rgba(34, 211, 238, 0.35);
+}
+
+.back-link {
+  font-size: 14px;
+  color: var(--accent);
+  text-decoration: none;
+  text-align: right;
+}
+
+.back-link:hover { text-decoration: underline; }
+
+h1 {
+  font-size: 30px;
+  font-weight: 800;
+  margin: 0 0 6px;
+  letter-spacing: -0.01em;
+}
+
+.updated {
+  color: var(--text-secondary);
+  font-size: 14px;
+  margin: 0 0 32px;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 40px 0 12px;
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+section p {
+  margin: 0 0 14px;
+  color: #e6e9ec;
+  font-size: 15px;
+}
+
+section ul, section ol {
+  margin: 0 0 14px;
+  padding-left: 20px;
+  color: #e6e9ec;
+  font-size: 15px;
+}
+
+section li { margin-bottom: 6px; }
+
+a { color: var(--accent); }
+
+.contact-hero {
+  padding: 22px 24px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+}
+
+.contact-hero p {
+  margin: 0 0 6px;
+  color: var(--text-secondary);
+  font-size: 15px;
+}
+
+.contact-hero .email {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--accent);
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.contact-hero .email:hover { text-decoration: underline; }
+
+.faq details {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 0 20px;
+  margin-bottom: 12px;
+}
+
+.faq summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 16px 28px 16px 0;
+  font-weight: 600;
+  font-size: 15px;
+  position: relative;
+}
+
+.faq summary::-webkit-details-marker { display: none; }
+
+.faq summary::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 14px;
+  font-size: 20px;
+  color: var(--accent);
+  font-weight: 400;
+}
+
+.faq details[open] summary::after { content: "−"; }
+
+.faq details > div { padding: 0 0 16px; }
+
+.faq details p, .faq details li {
+  color: #e6e9ec;
+  font-size: 15px;
+}
+
+.faq details p { margin: 0 0 10px; }
+.faq details ul, .faq details ol { margin: 0 0 10px; padding-left: 20px; }
+.faq details li { margin-bottom: 6px; }
+
+.path {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.links-card {
+  margin-top: 48px;
+  padding: 20px 24px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.links-card ul { list-style: none; padding: 0; margin: 8px 0 0; }
+.links-card li { margin-bottom: 6px; }
+.links-card a { color: var(--accent); text-decoration: none; }
+.links-card a:hover { text-decoration: underline; }
+
+footer {
+  margin-top: 48px;
+  font-size: 12px;
+  color: #5b6773;
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top-nav">
+    <a class="brand" href="index.html">
+      <img class="brand-icon" src="icon.png" alt="YewRide">
+      YewRide
+    </a>
+    <a class="back-link" href="privacy-policy.html">Politique de confidentialité →</a>
+  </div>
+
+  <h1>Assistance</h1>
+  <p class="updated">Une question, un bug, une idée ? On est là pour t'aider.</p>
+
+  <div class="contact-hero">
+    <p>Écris-nous, on te répond généralement sous 48 h :</p>
+    <a class="email" href="mailto:yewride.app@gmail.com?subject=Support%20YewRide">yewride.app@gmail.com</a>
+    <p style="margin-top:10px;">Pour nous aider à résoudre ton problème plus vite, indique ton modèle d'iPhone et d'Apple Watch, leur version d'iOS / watchOS et le sport concerné. Tu peux aussi nous écrire directement depuis l'app : <span class="path">Réglages → Aide &amp; Contact → Envoyer un email</span>.</p>
+  </div>
+
+  <section class="faq">
+    <h2>Questions fréquentes</h2>
+
+    <details>
+      <summary>Comment enregistrer une session avec l'Apple Watch ?</summary>
+      <div>
+        <ol>
+          <li>Vérifie que l'app YewRide est bien installée sur ta montre (app Watch de l'iPhone → YewRide → Installer).</li>
+          <li>Ouvre YewRide sur ta montre et choisis ton sport.</li>
+          <li>Lance la session avant de te mettre à l'eau (ou sur les pistes) : le GPS et les capteurs démarrent l'enregistrement.</li>
+          <li>À la fin, arrête la session sur la montre.</li>
+          <li>Ouvre YewRide sur ton iPhone, à proximité de ta montre : la session se synchronise automatiquement et apparaît avec sa carte et ses statistiques.</li>
+        </ol>
+        <p>Si une session reste « En attente de sync » sur la montre, garde l'iPhone à proximité, Bluetooth activé, et ouvre l'app sur les deux appareils.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Pourquoi mes vagues ou mes sauts ne sont-ils pas détectés ?</summary>
+      <div>
+        <p>La détection repose sur le GPS et les capteurs de mouvement de la montre. Quelques conseils pour qu'elle fonctionne au mieux :</p>
+        <ul>
+          <li><strong>Porte la montre bien serrée</strong> au poignet, pour qu'elle ne bouge pas pendant les mouvements.</li>
+          <li><strong>Choisis le bon sport</strong> au démarrage : chaque sport (surf, kite, wing, prone…) utilise son propre algorithme de détection.</li>
+          <li><strong>Garde un œil sur le GPS</strong> : le signal ne passe pas sous l'eau. En surf, évite de laisser ta montre immergée trop longtemps (par exemple en ramant bras tendus sous la surface), sinon elle risque de perdre le signal GPS.</li>
+          <li><strong>Vérifie les autorisations</strong> Localisation, Santé et Mouvement (voir ci‑dessous) : sans elles, la détection ne peut pas fonctionner.</li>
+          <li><strong>Ajuste la sensibilité</strong> de détection depuis la page « Sensibilité » de la montre, pendant ta session de surf : si des vagues sont détectées alors que tu rames, ou si au contraire certaines vagues ne sont pas détectées.</li>
+          <li>Garde la montre à jour (dernière version de watchOS) ainsi que l'app YewRide.</li>
+        </ul>
+        <p>Si le problème persiste, écris-nous en précisant le sport, la date de la session et ce que tu as observé : ça nous aide énormément à améliorer la détection.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Quelles autorisations faut-il donner, et pourquoi ?</summary>
+      <div>
+        <ul>
+          <li><strong>Localisation — « Lorsque l'app est active »</strong> : pour tracer ton parcours sur la carte et calculer distance et vitesse pendant tes sessions.</li>
+          <li><strong>Santé</strong> : pour enregistrer tes sessions comme entraînements dans l'app Santé et afficher fréquence cardiaque et calories.</li>
+          <li><strong>Mouvement et forme</strong> : pour détecter automatiquement tes vagues, runs et sauts.</li>
+        </ul>
+        <p>Ces données restent sur ton iPhone et ne sont jamais envoyées sur nos serveurs. Tu peux modifier ces autorisations à tout moment dans <span class="path">Réglages iOS → Confidentialité et sécurité</span>, ou dans <span class="path">Réglages iOS → YewRide</span>.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Comment gérer ou résilier mon abonnement Premium ?</summary>
+      <div>
+        <p>Les abonnements sont gérés par Apple. Pour modifier ou résilier le tien :</p>
+        <ul>
+          <li>Sur ton iPhone : <span class="path">Réglages iOS → ton nom → Abonnements → YewRide</span>.</li>
+          <li>Ou depuis l'app : <span class="path">Réglages → Mon abonnement → Gérer l'abonnement</span>.</li>
+        </ul>
+        <p>La résiliation prend effet à la fin de la période en cours : tu gardes l'accès Premium jusqu'à cette date. Sans résiliation au moins 24 h avant la fin de la période, l'abonnement est renouvelé automatiquement.</p>
+        <p>Pour une demande de remboursement, rends-toi sur <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a> : les remboursements sont traités uniquement par Apple.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Comment restaurer mes achats ?</summary>
+      <div>
+        <p>Si tu as changé d'iPhone ou réinstallé l'app et que ton accès Premium n'apparaît plus :</p>
+        <ol>
+          <li>Connecte-toi à YewRide avec le même compte que lors de ton achat.</li>
+          <li>Va dans <span class="path">Réglages → Mon abonnement → Restaurer les achats</span> (le bouton est aussi disponible en bas de l'écran Premium).</li>
+        </ol>
+        <p>Vérifie aussi que ton iPhone est connecté avec le même identifiant Apple que celui utilisé pour l'achat.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Comment supprimer mon compte et mes données ?</summary>
+      <div>
+        <p>Directement depuis l'app : <span class="path">Réglages → Mon compte → Supprimer mon compte</span>. Pour des raisons de sécurité, il te sera demandé de te reconnecter avant la suppression.</p>
+        <p>La suppression est définitive. Elle efface ton compte, ton profil et ta photo de profil, et révoque l'accès « Se connecter avec Apple » si tu l'utilisais.</p>
+        <p><strong>Attention :</strong> supprimer ton compte ne résilie pas ton abonnement Premium. Pense à le résilier d'abord depuis <span class="path">Réglages iOS → ton nom → Abonnements</span>.</p>
+      </div>
+    </details>
+  </section>
+
+  <div class="links-card">
+    Documents utiles
+    <ul>
+      <li><a href="privacy-policy.html">Politique de confidentialité</a></li>
+      <li><a href="terms-of-use.html">Conditions générales d'utilisation</a></li>
+      <li><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">Contrat de licence (EULA) Apple</a></li>
+    </ul>
+  </div>
+
+  <footer>© 2026 Malo Dourver — YewRide</footer>
+</div>
+</body>
+</html>
